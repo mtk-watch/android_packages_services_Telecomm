@@ -634,4 +634,14 @@ class InCallAdapter extends IInCallAdapter.Stub {
             Log.endSession();
         }
     }
+
+    /**
+     * M: Mediatek APIs related with call operations.
+     * Since Mediatek add doMtkAction API in telecom framework for support Mediatek features,
+     * add doMtkAction API in AOSP additional glue layer for avoid Google AOSP build error.
+     *
+     * @param params The bundle of operation parameters.
+     */
+    @Override
+    public void doMtkAction(Bundle bundle) {}
 }
